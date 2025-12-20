@@ -1,0 +1,88 @@
+/*index.html styles*/
+/*NOTES*/
+/*BELUM: REPOSITION DROPDOWN KE KANAN, KASIH ICON ARROW DOWN KE DROPDOWN*/
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #f7f3e7;
+    font-family: 'DM Serif Display', serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    gap: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    z-index: 100;
+}
+
+.navbar:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fcfcfc;
+}
+
+.hyplink {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar .logos {
+    display: flex;
+    
+    gap: 20px;
+    align-items: center;
+}
+.navbar .logos img {
+    width: 70px;
+}
+
+.navbar .hyplink a {
+    text-decoration: none;
+    color: #3a2100;
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;    
+}             
+
+.navbar .hyplink a:hover {
+    color: #161100;
+    transform: scale(1.02);
+}
+
+.menu {
+    position: relative;
+    list-style: none;
+    display: flex;
+    width: 150px;
+    border-radius: 3px;
+}
+
+.submenu {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    list-style: none;
+    background-color: rgb(235, 234, 234);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow:rgba(0, 0, 0, 0.3) 0px 4px 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu:hover .submenu {
+    opacity: 1;
+    top: 100%;
+    pointer-events: auto;
+}

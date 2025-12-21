@@ -12,14 +12,14 @@
 
 *{box-sizing:border-box}
 html,body{height:100%}
-body{
-  margin:0;
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: linear-gradient(180deg, var(--bg), #ffffff);
-  color:#0f1724;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5;
+body {
+    margin-top: 70px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #f7f3e7;
+    font-family: 'DM Serif Display', serif;
 }
 
 .container{
@@ -33,22 +33,12 @@ body{
 /*BELUM: REPOSITION DROPDOWN KE KANAN, KASIH ICON ARROW DOWN KE DROPDOWN*/
 
 
-body {
-    margin-top: 70px;
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-    overflow-x: hidden;
-    background-color: #f7f3e7;
-    font-family: 'DM Serif Display', serif;
-}
-
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 70px;
+    height: 92px;
     display: flex;
     align-items: center;
     background-color: #ffffff;
@@ -183,6 +173,7 @@ body {
 .backgroundpic h1 {
     position: absolute;
     color: #ffffff;
+    background-color: black;
     font-size: 60px;
     text-align: center;
     z-index: 1;

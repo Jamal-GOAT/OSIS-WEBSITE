@@ -88,3 +88,21 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
   });
 });
+
+const elements = document.querySelectorAll('.back1');
+
+function checkVisibility() {
+    const triggerPoint = window.innerHeight * 0.8;
+
+    elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.8 && rect.top > 0) {
+          el.classList.add('visible');
+        } else {
+          el.classList.remove('visible');
+        }
+    });
+}
+
+window.addEventListener('scroll', checkVisibility);
+window.addEventListener('load', checkVisibility);

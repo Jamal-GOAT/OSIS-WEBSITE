@@ -1,3 +1,6 @@
+
+/*NOTES*/
+/*BELUM: VALUES DECOR, WHAT DO WE DO AS A STUDENT MEMBER, FOOTER, INDO VERSION */
 :root{
   --bg: #f8f9fb;
   --card-bg: #ffffff;
@@ -13,13 +16,14 @@
 *{box-sizing:border-box}
 html,body{height:100%}
 body {
-    margin-top: 70px;
+    margin-top: 90px;
     margin-left: 0;
     margin-right: 0;
     width: 100%;
     overflow-x: hidden;
     background-color: #f7f3e7;
     font-family: 'DM Serif Display', serif;
+    scroll-behavior: smooth;    
 }
 
 .container{
@@ -27,10 +31,55 @@ body {
   margin: 0 auto;
 }
 
-/* NAVBAR */
 /*index.html styles*/
-/*NOTES*/
-/*BELUM: REPOSITION DROPDOWN KE KANAN, KASIH ICON ARROW DOWN KE DROPDOWN*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HOME PAGE STYLES */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .navbar {
@@ -88,6 +137,12 @@ body {
     transform: scale(1.05);
 }
 
+.selected {
+    color: #1f0469;
+    border-bottom: 2px solid #1f0469;
+    padding-bottom: 4px;
+}
+
 .menu {
     position: relative;
     list-style: none;
@@ -123,8 +178,8 @@ body {
 }
 
 .menu img {
-    width: 35px;
-    height: 30px;
+    width: 37px;
+    height: 29px;
     align-self: center;
     margin-left: 5px;
 }
@@ -163,8 +218,8 @@ body {
 
 .backgroundpic img{
     width: 100%;
-    object-position: 0 100%;
-    height: 125vh;
+    object-position: center 100%;
+    height: 800px;
     object-fit: cover;
     filter: brightness(40%) blur(2px);
     box-sizing: border-box;
@@ -173,13 +228,144 @@ body {
 .backgroundpic h1 {
     position: absolute;
     color: #ffffff;
-    background-color: black;
     font-size: 60px;
     text-align: center;
     z-index: 1;
     width: 80%;
     line-height: 1.2;
 }
+
+/*GENERAL STYLES FOR TITLE AND PARAGRAPH*/
+.title {
+    font-size: 36px;
+    font-family: 'DM Serif Display', serif;
+}
+
+.par {
+    font-size: 15px;
+    line-height: 1.6;
+    font-family: 'Alice', serif;
+}
+/*UNTIL HERE*/
+
+.back1 {
+    margin: 50px 300px 0 300px;
+    text-align: center;
+    color: #0A2342;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom:50px;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 1s ease-out;
+}
+
+.back1.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.back1 .title {
+    font-size: 36px;
+    font-family: 'DM Serif Display', serif;
+    margin-bottom: 20px;
+}
+
+.back1 .par {
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: 'Alice', serif;
+}
+
+
+
+
+
+
+
+.back2 {
+     background-color: #152a41;
+}
+
+/*GENERAL STYLES FOR MAIN TITLE*/
+.maintitle {
+    font-size: 48px;
+    font-family: 'DM Serif Display', serif;
+    text-align: center;
+    margin-top: 40px;
+}
+/*UNTIL HERE*/
+
+.back2 .maintitle {
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.back2 .text {
+  padding: 50px auto 50px auto;
+  display: flex;
+  flex-direction: column;
+  text-wrap: wrap;
+  gap: 20px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEMBERS PAGE STYLES*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Header (filters below navbar) */
 .site-header{
@@ -196,7 +382,7 @@ body {
 .brand h1{
   margin:0;
   font-weight:600;
-  font-family: "Merriweather", serif;
+  font-family: "Alice", serif;
   letter-spacing: -0.02em;
   font-size:1.25rem;
 }
@@ -241,7 +427,7 @@ body {
   margin: 0 auto 2rem auto;
 }
 .intro h2{
-  font-family: "Merriweather", serif;
+  font-family: "Alice", serif;
   font-size: 2rem;
   margin: 0 0 0.5rem 0;
   color: var(--accent);

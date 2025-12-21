@@ -7,11 +7,17 @@
   <meta name="description" content="Formal gallery for OSIS members — Mentors, Members, and CIPs." />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=DM+Serif+Display:ital@0;1&family=Outfit:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="stlye2.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
   <!-- NAVBAR: logos + links (normal, in body) -->
   <nav class = "navbar">
         <div class="logos">
@@ -20,8 +26,8 @@
             <img src="OSIS.png" alt="">
         </div>
         <div class="hyplink">
-            <a href="index2.html">Home</a>
-            <a href="index.html">Mentors & Members</a>
+            <a href="index.html" class = "selected">Home</a>
+            <a href="members.html">Mentors & Members</a>
             <a href="">Events</a>
         </div>
         <ul class="menu">
@@ -32,8 +38,8 @@
                 </div>
                 
                 <ul class="submenu">
-                    <li>English</li>
-                    <li>Bahasa Indonesia</li>
+                    <li><a href="index.html">English</a></li>
+                    <li><a href="indexindo.html">Bahasa Indonesia</a></li>
                 </ul>
             </li>
         </ul>
@@ -42,8 +48,58 @@
     <div class = "backgroundpic">
         <img src="OSISpicture.jpg" alt="">
 
-        <h1>WELCOME TO OSIS 2025-2026</h1>
+        <h1>WELCOME TO OSIS 2025-2026 ELYON CHRISTIAN SCHOOL</h1>
     </div>
-  </nav>
+
+    <div class="back1">
+        <h1 class="title">What is OSIS?</h1>
+        <p class="par">OSIS is an organization that represents students and works to improve the school environment. It plays a significant role in student life as it can teach them leadership skills and help them become more involved in school activities. It also can help them build communication and teamwork skills to accomplish their goals.</p>  
+    </div>
+
+    <div class="back2">
+        <h1 class="maintitle">Our Values</h1>
+        <div class="text">
+            <div>
+                <h1 class="num">1</h1>
+                <h2>Leadership</h2>
+                <p>
+                    We believe leadership means taking responsibility, making thoughtful decisions,
+                    and setting a positive example for others. OSIS leaders are expected to act with
+                    integrity, confidence, and accountability in every situation, both inside and
+                    outside the school environment.
+                </p>
+            </div>
+            <div>
+                <h1 class="num">2</h1>
+                <h2>Integrity</h2>
+                <p>
+                    We believe integrity means being honest, fair, and consistent in all actions.
+                    OSIS members are expected to uphold the highest standards of ethical behavior,
+                    both in their personal lives and within the school community.
+                </p>
+            </div>
+            <div>
+                <h1 class="num">3</h1>
+                <h2>Respect</h2>
+                <p>
+                    We believe respect means treating others with dignity and consideration.
+                    OSIS members are expected to show respect for all individuals, regardless of
+                    differences in background, beliefs, or opinions.
+                </p>
+            </div>
+            <div>
+                <h1 class="num">4</h1>
+                <h2>Responsibility</h2>
+                <p>
+                    We believe responsibility means being accountable for one's actions and commitments.
+                    OSIS members are expected to take ownership of their roles and contribute meaningfully
+                    to the school community.
+                </p>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script> 
 </body>
 </html>

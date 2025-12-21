@@ -1,17 +1,19 @@
-<!--BELUM: CONTENT-->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OSIS Members Gallery</title>
+  <meta name="description" content="Formal gallery for OSIS members — Mentors, Members, and CIPs." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class = "navbar">
+  <!-- NAVBAR: logos + links (normal, in body) -->
+  <nav class = "navbar">
         <div class="logos">
             <img src="elyonlogo.png" alt="">
             <img src="elyonsinga.jpg" alt="">
@@ -29,7 +31,6 @@
                     <img src="arrowdown.png" alt="">
                 </div>
                 
-                
                 <ul class="submenu">
                     <li>English</li>
                     <li>Bahasa Indonesia</li>
@@ -43,6 +44,127 @@
 
         <h1>WELCOME TO OSIS 2025-2026</h1>
     </div>
-    
+  </nav>
+  <!-- Filters: below navbar, above the gallery -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>OSIS Members Gallery</h1>
+        <p class="subtitle">Mentors • Members • CIPs</p>
+      </div>
+
+      <nav class="top-actions" aria-label="Gallery filters">
+        <div class="filter-group" role="tablist" aria-label="Filter members">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="member" role="tab">Members</button>
+          <button class="filter-btn" data-filter="mentor" role="tab">Mentors</button>
+          <button class="filter-btn" data-filter="cip" role="tab">CIPs</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <!-- Intro on top of the gallery (centered, inside the body above the cards) -->
+    <section class="intro" aria-labelledby="intro-heading">
+      <h2 id="intro-heading">Welcome to the OSIS Members Directory</h2>
+      <p class="lead">Discover our Mentors, active Members, and CIPs. Use the filters above to view specific groups. Click a profile to see more details.</p>
+    </section>
+
+    <section aria-labelledby="gallery-heading" class="gallery-wrapper">
+      <h3 id="gallery-heading" class="visually-hidden">OSIS Members</h3>
+
+      <div id="gallery" class="grid">
+        <!-- Mentor example -->
+        <article class="card" data-category="mentor" tabindex="0" aria-label="Profile: Dr. Amina Yusuf, Mentor">
+          <img class="avatar" src="https://ui-avatars.com/api/?name=Amina+Yusuf&background=0A2342&color=ffffff&size=256" alt="Portrait of Dr. Amina Yusuf">
+          <div class="card-body">
+            <h3 class="name">Dr. Amina Yusuf</h3>
+            <p class="role">Mentor — Computer Science</p>
+            <p class="brief">Experienced mentor in algorithms and systems design.</p>
+            <button class="details-btn">View profile</button>
+          </div>
+        </article>
+
+        <!-- Member example -->
+        <article class="card" data-category="member" tabindex="0" aria-label="Profile: Rizal Putra, Member">
+          <img class="avatar" src="https://ui-avatars.com/api/?name=Rizal+Putra&background=0A2342&color=ffffff&size=256" alt="Portrait of Rizal Putra">
+          <div class="card-body">
+            <h3 class="name">Rizal Putra</h3>
+            <p class="role">Member — Frontend</p>
+            <p class="brief">Specializes in user interfaces and accessibility.</p>
+            <button class="details-btn">View profile</button>
+          </div>
+        </article>
+
+        <!-- CIP example -->
+        <article class="card" data-category="cip" tabindex="0" aria-label="Profile: Laila Sari, CIP">
+          <img class="avatar" src="https://ui-avatars.com/api/?name=Laila+Sari&background=0A2342&color=ffffff&size=256" alt="Portrait of Laila Sari">
+          <div class="card-body">
+            <h3 class="name">Laila Sari</h3>
+            <p class="role">CIP — Intern</p>
+            <p class="brief">Currently focused on backend systems and APIs.</p>
+            <button class="details-btn">View profile</button>
+          </div>
+        </article>
+
+        <!-- Additional samples -->
+        <article class="card" data-category="mentor" tabindex="0" aria-label="Profile: Prof. John Tan, Mentor">
+          <img class="avatar" src="https://ui-avatars.com/api/?name=John+Tan&background=0A2342&color=ffffff&size=256" alt="Portrait of John Tan">
+          <div class="card-body">
+            <h3 class="name">Prof. John Tan</h3>
+            <p class="role">Mentor — Data Science</p>
+            <p class="brief">Researcher in machine learning and applied statistics.</p>
+            <button class="details-btn">View profile</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="member" tabindex="0" aria-label="Profile: Siti Rahma, Member">
+          <img class="avatar" src="https://ui-avatars.com/api/?name=Siti+Rahma&background=0A2342&color=ffffff&size=256" alt="Portrait of Siti Rahma">
+          <div class="card-body">
+            <h3 class="name">Siti Rahma</h3>
+            <p class="role">Member — QA</p>
+            <p class="brief">Ensures product quality through thorough testing.</p>
+            <button class="details-btn">View profile</button>
+          </div>
+        </article>
+
+        <article class="card" data-category="cip" tabindex="0" aria-label="Profile: Ahmad Hadi, CIP">
+          <img class="avatar" src="https://ui-avatars.com/api/?name=Ahmad+Hadi&background=0A2342&color=ffffff&size=256" alt="Portrait of Ahmad Hadi">
+          <div class="card-body">
+            <h3 class="name">Ahmad Hadi</h3>
+            <p class="role">CIP — Intern</p>
+            <p class="brief">Learning devops practices and automation.</p>
+            <button class="details-btn">View profile</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Profile modal (hidden by default) -->
+  <div id="profile-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-panel" role="document">
+      <button class="modal-close" aria-label="Close profile">&times;</button>
+      <div class="modal-content">
+        <img id="modal-avatar" class="modal-avatar" src="" alt="">
+        <div class="modal-info">
+          <h3 id="modal-name">Name</h3>
+          <p id="modal-role" class="role">Role</p>
+          <p id="modal-bio" class="bio">Full biography goes here. Use this space for key accomplishments, responsibilities, and contact details.</p>
+          <ul class="meta-list" id="modal-meta"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container-footer">
+      <p>&copy; <span id="year"></span> OSIS — All rights reserved.</p>
+      <p>This website is created by OSIS, for OSIS</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

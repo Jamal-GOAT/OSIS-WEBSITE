@@ -678,7 +678,7 @@ main.container > * {
 
 /* MOBILE LAYOUT */
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .navbar {
         display: none;
         opacity: 0;
@@ -689,4 +689,5 @@ main.container > * {
         opacity: 1;
         pointer-events: auto;
     }
+
 }

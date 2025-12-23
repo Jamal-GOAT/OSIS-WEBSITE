@@ -106,3 +106,26 @@ function checkVisibility() {
 
 window.addEventListener('scroll', checkVisibility);
 window.addEventListener('load', checkVisibility);
+
+
+ const mobileMenus = Array.from(document.querySelectorAll('.navbarmobile .menu'));
+  mobileMenus.forEach(menu => {
+    if (!menu.hasAttribute('tabindex')) menu.setAttribute('tabindex', '0');
+
+    menu.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menu.classList.toggle('open');
+    });
+
+    menu.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        menu.classList.toggle('open');
+      }
+    });
+  });
+
+  document.addEventListener('click', () => {
+    mobileMenus.forEach(m => m.classList.remove('open'));
+  });
+

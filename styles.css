@@ -92,12 +92,13 @@ body {
     align-items: center;
     background-color: #ffffff;
     padding: 10px 20px;
-    gap: 100px;
+    gap: 4dvw;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
     z-index: 100;
     border-bottom: 3px solid #20396e;
     width: 100%;
+
 }
 
 .navbar:hover {
@@ -107,8 +108,10 @@ body {
 
 .hyplink {
     display: flex;
-    gap: 60px;
-    /* New gap (Original 100 overflow from screen - James) */
+    gap: 3vw;
+    flex: 1;
+    align-items: center;
+    /* New gap (Original 80 overflow from screen - Nathan) */
     flex-direction: row;
     /* Ensure it locks to row */
 }
@@ -120,15 +123,17 @@ body {
     align-items: center;
 }
 .navbar .logos img {
-    width: 80px;
+    width: 75px;
 }
 
 .navbar .hyplink a {
+    white-space: nowrap;
     text-decoration: none;
     color: #20396e;
     font-weight: bold;
     margin-left: 20px;
-    font-size: 18px;
+    font-size: clamp(14px, 1.7vw, 18px);
+    /*set value scale screen size feom 14px to 18px*/
     transition: color 0.3s ease, transform 0.3s ease;    
 }             
 
@@ -149,7 +154,8 @@ body {
     display: flex;
     width: 50px;
     border-radius: 3px;
-    margin-left: 130px;
+    margin-left: auto;
+    width: auto;
 }
 
 .submenu {
@@ -190,6 +196,11 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
+.menu li ul li a {
+    text-decoration: none;
+    color: black;
+} 
+
 .menu li ul li:hover {
     background-color: #dbdbdb;
     cursor: pointer;
@@ -206,6 +217,64 @@ body {
 .menu:hover .container {
     background-color:#eeeeee;
 }
+
+.navbarmobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    gap: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    z-index: 100;
+    border-bottom: 3px solid #20396e;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navbarmobile:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fcfcfc;
+}
+
+.navbarmobile .logos {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbarmobile .logos img {
+    width: 60px;
+}
+
+.navbarmobile .container img {
+    width: 60%;
+    height: 60%;
+    align-self: center;
+    margin-left: 5px;
+}
+
+.navbarmobile .container {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.navbarmobile .container:hover {
+    transform: scale(1.1)
+}
+
+
+
+
 
 .backgroundpic {
     position: relative;
@@ -249,7 +318,7 @@ body {
 /*UNTIL HERE*/
 
 .back1 {
-    margin: 50px 300px 0 300px;
+    margin: 50px 25vw 0 25vw;
     text-align: center;
     color: #0A2342;
     padding: 20px;
@@ -596,4 +665,28 @@ main.container > * {
 /* ensure grid clears any previous layout */
 .gallery-wrapper {
   clear: both;
+}
+
+.menu,
+.menu p,
+.navbarmobile .container,
+.navbarmobile .container img {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .navbarmobile {
+        opacity: 1;
+        pointer-events: auto;
+    }
 }

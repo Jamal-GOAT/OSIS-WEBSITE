@@ -737,6 +737,10 @@ main.container > * {
         pointer-events: auto;
     }
 
+    .navbarmobile .logos img {
+      width: 50px;
+    }
+
     .navbarmobile .mobile-menu {
       /* rendered and hidden with opacity/visibility so transforms animate */
       display: block;
@@ -780,6 +784,10 @@ main.container > * {
       gap: 12px;
       align-items: center;
       padding: 0;
+    }
+
+    .navbarmobile .container img {
+      width: 50px;
     }
 
     .navbarmobile .open {

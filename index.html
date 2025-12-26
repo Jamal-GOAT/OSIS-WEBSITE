@@ -46,24 +46,33 @@
     </nav>
 
     <nav class="navbarmobile">
-        <div class="logos">...</div>
-        <div class="container">
-            <img src="menuicon.png" alt="">
+        <div class="logos">
+            <img src="elyonlogo.png" alt="">
+            <img src="elyonsinga.jpg" alt="">
+            <img src="OSIS.png" alt="">
         </div>
 
-        <ul class="mobile-menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">Mentors & Members</a></li>
-            <li><a href="">Events</a></li>
-
-            <li class="menu">
-                <p>Languages</p>
-                <ul class="mobile-submenu">
-                    <li><a href="index.html">English</a></li>
-                    <li><a href="indexindo.html">Bahasa Indonesia</a></li>
-                </ul>
-            </li>
+        <ul class="mobile-menu" id="mobile-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="members.html">Mentors & Members</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="#mobile-submenu" class = "menu">Languages</a></li>
+            <ul class="mobile-submenu" id="mobile-submenu">
+                <li><a href="index.html">English</a></li>
+                <li><a href="indexindo.html">Bahasa Indonesia</a></li>
+            </ul>
         </ul>
+
+        <div class="container">
+            <a href="#mobile-menu" class="open">
+                <img src="menuicon.png" alt="">
+            </a>
+            <a href="#!" class="close">
+                <img src="menuicon.png" alt="">
+            </a>
+        </div>
+        
+
     </nav>
 
     <div class = "backgroundpic">

@@ -735,6 +735,7 @@ main.container > * {
         display: flex;
         opacity: 1;
         pointer-events: auto;
+        gap: 30px;
     }
 
     .navbarmobile .logos img {

@@ -362,7 +362,7 @@ body {
 
 
 .back2 {
-     background-color: #152a41;
+  background-color: #152a41;
 }
 
 /*GENERAL STYLES FOR MAIN TITLE*/
@@ -485,6 +485,7 @@ body {
   font-weight:600;
   font-size:0.9rem;
   transition: var(--transition);
+  width: 100%;
 }
 .filter-btn:hover {
   transform: translateY(-2px);

@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const yearSpan = document.getElementById('year');
 
   // Set current year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
   // Filtering
@@ -44,13 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
     modalAvatar.alt = `Portrait of ${name}`;
     modalName.textContent = name;
     modalRole.textContent = role;
-    modalBio.textContent = brief + ' — Add a longer bio here with accomplishments, responsibilities, and contact information.';
+    modalBio.textContent = brief;
 
-    // optional metadata reset
-    modalMeta.innerHTML = `
-      <li><strong>Email:</strong> <a href="mailto:example@osis.org">example@osis.org</a></li>
-      <li><strong>Location:</strong> City, Country</li>
-    `;
+    
 
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';

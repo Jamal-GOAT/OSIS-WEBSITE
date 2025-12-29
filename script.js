@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const modalBio = document.getElementById('modal-bio');
   const modalMeta = document.getElementById('modal-meta');
   const modalClose = document.querySelector('.modal-close');
+  const modalClassroom = document.getElementById('modal-classroom');
   const yearSpan = document.getElementById('year');
 
   // Set current year in footer
@@ -40,12 +41,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const name = card.querySelector('.name').textContent.trim();
     const role = card.querySelector('.role').textContent.trim();
     const brief = card.querySelector('.brief').textContent.trim();
+    const classroom = card.querySelector('.classroom').textContent.trim();
 
     modalAvatar.src = img.src;
     modalAvatar.alt = `Portrait of ${name}`;
     modalName.textContent = name;
     modalRole.textContent = role;
     modalBio.textContent = brief;
+    modalClassroom.textContent = "Classroom: " + classroom;
 
     
 

@@ -500,6 +500,7 @@ body {
 /* Main content */
 .main-content {
   padding: 2rem 0 4rem 0;
+  height: 2000px;
 }
 
 /* Intro above gallery */
@@ -654,7 +655,7 @@ body {
   margin: 6px 0 12px 0;
   color: var(--muted);
 }
-.modal-info .bio {
+.modal-info .birthdate {
   color: #374151;
   line-height: 1.6;
 }
@@ -669,16 +670,16 @@ body {
 }
 
 /* Footer */
-.site-footer{
-  padding:1rem 0;
-  text-align:center;
-  color:var(--muted);
-  border-top: 1px solid rgba(10,35,66,0.04);
+.site-footer {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(10, 35, 66, 0.04);
 }
 
-.container-footer{
-    width: 100%;
-    /* To resize width and to center the text */
+.container-footer {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Utilities */

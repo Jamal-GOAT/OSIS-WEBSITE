@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const modalBio = document.getElementById('modal-bio');
   const modalMeta = document.getElementById('modal-meta');
   const modalClose = document.querySelector('.modal-close');
-  const modalClassroom = document.getElementById('modal-classroom');
+  const modalExtra = document.getElementById('modal-extra');
   const yearSpan = document.getElementById('year');
 
   // Set current year in footer
@@ -35,24 +35,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Open modal from card
+  // *Open modal from card + function
   function openModalFromCard(card) {
     const img = card.querySelector('.avatar');
     const name = card.querySelector('.name').textContent.trim();
     const role = card.querySelector('.role').textContent.trim();
     const brief = card.querySelector('.brief').textContent.trim();
-    const classroom = card.querySelector('.classroom').textContent.trim();
+    const classroom = card.querySelector('.classroom')?.textContent.trim();
+    const subject = card.querySelector('.subject')?.textContent.trim();
 
     modalAvatar.src = img.src;
     modalAvatar.alt = `Portrait of ${name}`;
     modalName.textContent = name;
     modalRole.textContent = role;
     modalBio.textContent = brief;
-    modalClassroom.textContent = "Classroom: " + classroom;
+    if (subject) {
+    modalExtra.textContent = `Subject teaching: ${subject}`;
+    modalExtra.style.display = 'block';
+  } else if (classroom && classroom !== '-') {
+    modalExtra.textContent = `Classroom: ${classroom}`;
+    modalExtra.style.display = 'block';
+  } else {
+    modalExtra.style.display = 'none';
+  }
 
-    
+  modal.setAttribute('aria-hidden', 'false');
 
-    modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
     modalClose.focus();
   }

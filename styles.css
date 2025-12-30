@@ -804,6 +804,7 @@ footer {
   display: flex;
   justify-content: center;
   border-top: 1px solid #20396e;
+  height: 20vh;
 }
 
 
@@ -972,5 +973,6 @@ footer {
 
 
 }
+
 
 

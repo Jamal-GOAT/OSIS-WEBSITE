@@ -407,6 +407,7 @@ body {
     flex: 1;
     min-width: 300px;
     opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .text1, .text3 {
@@ -427,7 +428,6 @@ body {
 .back2 .text1.visible, .back2 .text2.visible, .back2 .text3.visible, .back2 .text4.visible {
     opacity: 1;
     transform: translateX(0);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .back2 .maintitle.visible {
@@ -562,11 +562,11 @@ body {
   border-radius: 8px;
   cursor: pointer;
   font-weight:600;
-  font-size:0.67rem;
+  font-size:0.5rem;
   transition: var(--transition);
   width: 100%;
   font-family: 'DM Serif Display', serif;
-  width: 150px;
+  width: 100px;
 }
 .filter-btn:hover {
   transform: translateY(-2px);
@@ -946,3 +946,4 @@ footer {
 
 
 }
+

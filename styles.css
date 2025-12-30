@@ -16,7 +16,7 @@ body {
     margin-top: 90px;
     margin-left: 0;
     margin-right: 0;
-    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     background-color: #f7f3e7;
     font-family: 'DM Serif Display', serif;
@@ -972,4 +972,5 @@ footer {
 
 
 }
+
 

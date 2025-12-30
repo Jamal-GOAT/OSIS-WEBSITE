@@ -799,12 +799,47 @@ main.container > * {
 
 footer {
   background-color: white;
-  height: 65px;
+  height: auto;
   font-size: 17px;
   display: flex;
   justify-content: center;
   border-top: 1px solid #20396e;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* MOBILE LAYOUT */
 
 @media (max-width: 860px) {

@@ -227,8 +227,8 @@ body {
     display: flex;
     align-items: center;
     background-color: #ffffff;
-    padding: 10px 20px;
-    gap: 100px;
+    padding: 10px 5px;
+    gap: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
     z-index: 100;
@@ -245,12 +245,13 @@ body {
 
 .navbarmobile .logos {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .navbarmobile .logos img {
-    width: 60px;
+    width: 40px;
 }
 
 .navbarmobile .container img {
@@ -263,13 +264,12 @@ body {
     display: flex;
     align-items: center;
     border-radius: 5px;
-    padding: 0 20px;
+    padding: 0;
     transition: all 0.3s ease;
+    margin-left: auto;
 }
 
-.navbarmobile .container:hover {
-    transform: scale(1.1)
-}
+
 
 .mobile-menu:target {
     background-color: rgb(235, 234, 234);
@@ -378,10 +378,12 @@ body {
     color: white;
     padding-top: 50px;
     padding-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-50px);
 }
 
 .back2 .text {
-  padding: 50px auto 50px auto;
+  padding: 50px 10% 100px 10%;
   display: flex;
   flex-direction: column;
   text-wrap: wrap;
@@ -389,6 +391,86 @@ body {
   color: white;
 }
 
+.back2 .text .num {
+    font-size: 36px;
+    font-family: 'DM Serif Display', serif;
+    margin-bottom: 10px;
+}
+
+.section1, .section2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.text1, .text2, .text3, .text4 {
+    flex: 1;
+    min-width: 300px;
+    opacity: 0;
+}
+
+.text1, .text3 {
+    transform: translateX(-50px);
+}
+
+.text2, .text4 {
+    transform: translateX(50px);
+}
+
+.back2 .text {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  color: white;
+}
+
+.back2 .text1.visible, .back2 .text2.visible, .back2 .text3.visible, .back2 .text4.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.back2 .maintitle.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.back3 {
+    display: flex;
+    padding: 50px 10% 50px 10%;
+    flex-direction: column;
+    color: #0A2342;
+}
+
+.back3 h1 {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+.back3 h1.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.back3 p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Alice', serif;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.back3 p.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
 
 
 
@@ -459,7 +541,6 @@ body {
 .brand h1{
   margin:0;
   font-weight:600;
-  font-family: "Alice", serif;
   letter-spacing: -0.02em;
   font-size:1.25rem;
 }
@@ -474,6 +555,7 @@ body {
   display:flex;
   gap:0.5rem;
   background: transparent;
+  flex-wrap: wrap;
 }
 .filter-btn{
   background: transparent;
@@ -486,6 +568,8 @@ body {
   font-size:0.9rem;
   transition: var(--transition);
   width: 100%;
+  font-family: 'DM Serif Display', serif;
+  width: 150px;
 }
 .filter-btn:hover {
   transform: translateY(-2px);
@@ -507,9 +591,11 @@ body {
   text-align:center;
   max-width:900px;
   margin: 0 auto 2rem auto;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 .intro h2{
-  font-family: "Alice", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 2rem;
   margin: 0 0 0.5rem 0;
   color: var(--accent);
@@ -519,6 +605,7 @@ body {
   color: #374151;
   font-size: 1rem;
   line-height: 1.6;
+  font-family: "Alice", serif;
 }
 
 /* Grid */
@@ -722,7 +809,14 @@ main.container > * {
   user-select: none;
 }
 
-
+footer {
+  background-color: white;
+  height: 65px;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #20396e;
+}
 /* MOBILE LAYOUT */
 
 @media (max-width: 860px) {
@@ -736,7 +830,6 @@ main.container > * {
         display: flex;
         opacity: 1;
         pointer-events: auto;
-        gap: 30px;
     }
 
     .navbarmobile .logos img {
@@ -756,6 +849,7 @@ main.container > * {
       width: 100%;
       margin: 0;
       padding: 8px 0;
+      justify-content: space-around;
       list-style: none;
       background: #ffffff;
       box-shadow: 0 8px 20px rgba(10,35,66,0.08);
@@ -786,6 +880,7 @@ main.container > * {
       gap: 12px;
       align-items: center;
       padding: 0;
+      padding-left: 30vw;
     }
 
     .navbarmobile .container img {

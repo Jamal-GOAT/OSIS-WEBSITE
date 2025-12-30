@@ -97,43 +97,28 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-const elements = document.querySelectorAll('.back1');
+document.addEventListener('DOMContentLoaded', function() {
+  const elements = document.querySelectorAll('.back1, .back2 .maintitle, .back2 .text .section1 .text1, .back2 .text .section1 .text2, .back2 .text .section2 .text3, .back2 .text .section2 .text4, .back3 h1, .back3 p');
 
-function checkVisibility() {
-    const triggerPoint = window.innerHeight * 0.8;
+  function checkVisibility() {
+      const triggerPoint = window.innerHeight * 0.8;
 
-    elements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.8 && rect.top > 0) {
-          el.classList.add('visible');
-        } else {
-          el.classList.remove('visible');
-        }
-    });
-}
+      elements.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < triggerPoint && rect.top > 0) {
+            if (!el.classList.contains('visible')) {
+              el.classList.add('visible');
+            }
+          } else {
+            if (el.classList.contains('visible')) {
+              el.classList.remove('visible');
+            }
+          }
+      });
+  }
 
-window.addEventListener('scroll', checkVisibility);
-window.addEventListener('load', checkVisibility);
+  window.addEventListener('scroll', checkVisibility);
+  window.addEventListener('load', checkVisibility);
+});
 
-
- const mobileMenus = Array.from(document.querySelectorAll('.navbarmobile .menu'));
-  mobileMenus.forEach(menu => {
-    if (!menu.hasAttribute('tabindex')) menu.setAttribute('tabindex', '0');
-
-    menu.addEventListener('click', (e) => {
-      e.stopPropagation();
-      menu.classList.toggle('open');
-    });
-
-    menu.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        menu.classList.toggle('open');
-      }
-    });
-  });
-
-  document.addEventListener('click', () => {
-    mobileMenus.forEach(m => m.classList.remove('open'));
-  });
-
+ 

@@ -224,8 +224,7 @@ body {
     display: flex;
     align-items: center;
     background-color: #ffffff;
-    padding: 10px 5px;
-    gap: 20px;
+    padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
     z-index: 100;
@@ -254,17 +253,8 @@ body {
 .navbarmobile .container img {
     width: 65px;
     align-self: center;
-    
 }
 
-.navbarmobile .container {
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    padding: 0;
-    transition: all 0.3s ease;
-    margin-left: auto;
-}
 
 
 
@@ -539,12 +529,13 @@ body {
   margin:0;
   font-weight:600;
   letter-spacing: -0.02em;
-  font-size:1.25rem;
+  font-size:1rem;
+  line-height: 1.2;
 }
 .subtitle{
   margin:4px 0 0 0;
   color: rgba(255,255,255,0.85);
-  font-size:0.9rem;
+  font-size:0.8rem;
 }
 
 /* Filters */
@@ -562,11 +553,11 @@ body {
   border-radius: 8px;
   cursor: pointer;
   font-weight:600;
-  font-size:0.5rem;
+  font-size: clamp(0.5rem, 1vw, 0.8rem);
   transition: var(--transition);
   width: 100%;
   font-family: 'DM Serif Display', serif;
-  width: 100px;
+  width: 70px;
 }
 .filter-btn:hover {
   transform: translateY(-2px);
@@ -877,7 +868,7 @@ footer {
       gap: 12px;
       align-items: center;
       padding: 0;
-      padding-left: 30vw;
+      padding-left: 40px;
     }
 
     .navbarmobile .container img {

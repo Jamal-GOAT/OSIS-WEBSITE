@@ -1,6 +1,3 @@
-
-/*NOTES*/
-/*BELUM: VALUES DECOR, WHAT DO WE DO AS A STUDENT MEMBER, FOOTER, INDO VERSION */
 :root{
   --bg: #f8f9fb;
   --card-bg: #ffffff;
@@ -430,7 +427,7 @@ body {
 .back2 .text1.visible, .back2 .text2.visible, .back2 .text3.visible, .back2 .text4.visible {
     opacity: 1;
     transform: translateX(0);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 .back2 .maintitle.visible {
@@ -565,7 +562,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
   font-weight:600;
-  font-size:0.9rem;
+  font-size:0.67rem;
   transition: var(--transition);
   width: 100%;
   font-family: 'DM Serif Display', serif;
@@ -946,5 +943,6 @@ footer {
         padding: none;
         margin: 20px -50px 0 -50px;
     }
+
 
 }

@@ -12,9 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const modalClose = document.querySelector('.modal-close');
   const modalExtra = document.getElementById('modal-extra');
   const yearSpan = document.getElementById('year');
-
-  // Set current year in footer
-  document.getElementById('year').textContent = new Date().getFullYear();
+  
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
   // Filtering

@@ -798,6 +798,172 @@ main.container > * {
   user-select: none;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EVENTS PAGE STYLES */
+
+.eventnav {
+    position: absolute;
+    z-index: 90;
+    left: 0;
+    right: 0;
+    margin-top: -10px;
+    background-color: var(--accent);
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.eventnav h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+}
+.month {
+  font-family: 'DM Serif Display', serif;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+}
+
+.month h1 {
+  text-align: center;
+  font-size: 48px;
+}
+
+.month li {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: 'Alice', serif;
+  font-weight: bold;
+}
+
+.pictures {
+  flex: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pictures img {
+  width: 30%;
+  margin: 1.66%;
+  border-radius: 10px;
+  box-shadow: 2px 8px 2px rgba(10,35,66,0.6);
+  transition: transform 0.2s ease;
+}
+
+
+#Sep {
+  background-color: #a09281;
+  color:#383026;
+}
+
+#Sep .img1 {
+  transform: rotate(-3deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer {
   background-color: white;
   height: auto;
@@ -813,37 +979,6 @@ footer p {
   padding: 10px 15px;
   font-family: 'DM Serif Display', serif;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -119,4 +119,24 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('load', checkVisibility);
 });
 
+function search_fun() {
+    const inputEl = document.getElementById('input-field');
+    const listContainer = document.getElementById('list-container');
+    if (!inputEl || !listContainer) return;
+
+    inputEl.addEventListener('input', (event) => {
+        const inputValue = event.target.value.trim().toLowerCase();
+        const listArr = listContainer.children;
+
+        for (const item of listArr) {
+            if (item.textContent.toLowerCase().includes(inputValue)) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }
+        }
+    });
+}
+
+search_fun();
  

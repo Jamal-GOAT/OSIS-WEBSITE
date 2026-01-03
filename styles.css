@@ -919,7 +919,7 @@ main.container > * {
 
 .eventnav h2 {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(15px, 1.5vw, 24px);
+    font-size: clamp(14px, 1.4vw, 24px);
     text-align: center;
     margin: 0;
     margin-right: 50px;
@@ -929,7 +929,7 @@ main.container > * {
 
 .input-box {
     width: 60%;
-    min-width: 150px;
+    min-width: 137px;
     text-align: center;
     position: relative;
 }
@@ -1261,6 +1261,7 @@ footer p {
 
 
 }
+
 
 
 

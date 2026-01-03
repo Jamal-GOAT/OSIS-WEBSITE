@@ -127,25 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const nextBtn = carousel.querySelector(".next");
   const prevBtn = carousel.querySelector(".prev");
-  const closeBtn = carousel.querySelector(".carousel-close");
-  const previewBtn = document.getElementById("previewCarouselBtn");
 
   let index = 0;
 
   function update() {
-    track.style.transform = `translateX(-${index * 100}vw)`;
+    track.style.transform = `translateX(-${index * 100}dvw)`;
   }
 
-  function openCarousel() {
-    carousel.style.display = "flex";
-    document.body.style.overflow = "hidden";
-    update();
-  }
-
-  function closeCarousel() {
-    carousel.style.display = "none";
-    document.body.style.overflow = "";
-  }
 
   nextBtn.onclick = () => {
     index = (index + 1) % slides.length;
@@ -156,14 +144,23 @@ document.addEventListener("DOMContentLoaded", () => {
     index = (index - 1 + slides.length) % slides.length;
     update();
   };
-
-  closeBtn.onclick = closeCarousel;
-  previewBtn.onclick = openCarousel;
-
-  // optional: open on page load
-  // openCarousel();
-
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeCarousel();
-  });
 });
+
+function search_fun() {
+  const inputEl = document.getElementById('input-field');
+  const listContainer = document.getElementById('list-container');
+  if (!inputEl || !listContainer) return;
+  inputEl.addEventListener('input', (event) => {
+    const inputValue = event.target.value.trim().toLowerCase();
+    const listArr = listContainer.children;
+    for (const item of listArr) {
+      if (item.textContent.toLowerCase().includes(inputValue)) {
+        item.style.display = "";
+      } else {
+        item.style.display = "none";
+      }
+    }
+  });
+}
+
+search_fun();

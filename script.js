@@ -119,24 +119,51 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('load', checkVisibility);
 });
 
-function search_fun() {
-    const inputEl = document.getElementById('input-field');
-    const listContainer = document.getElementById('list-container');
-    if (!inputEl || !listContainer) return;
+// carousel javascript for my baby hendrawan
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.getElementById("event-carousel");
+  const track = carousel.querySelector(".carousel-track");
+  const slides = track.children;
 
-    inputEl.addEventListener('input', (event) => {
-        const inputValue = event.target.value.trim().toLowerCase();
-        const listArr = listContainer.children;
+  const nextBtn = carousel.querySelector(".next");
+  const prevBtn = carousel.querySelector(".prev");
+  const closeBtn = carousel.querySelector(".carousel-close");
+  const previewBtn = document.getElementById("previewCarouselBtn");
 
-        for (const item of listArr) {
-            if (item.textContent.toLowerCase().includes(inputValue)) {
-                item.style.display = "";
-            } else {
-                item.style.display = "none";
-            }
-        }
-    });
-}
+  let index = 0;
 
-search_fun();
- 
+  function update() {
+    track.style.transform = `translateX(-${index * 100}vw)`;
+  }
+
+  function openCarousel() {
+    carousel.style.display = "flex";
+    document.body.style.overflow = "hidden";
+    update();
+  }
+
+  function closeCarousel() {
+    carousel.style.display = "none";
+    document.body.style.overflow = "";
+  }
+
+  nextBtn.onclick = () => {
+    index = (index + 1) % slides.length;
+    update();
+  };
+
+  prevBtn.onclick = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  };
+
+  closeBtn.onclick = closeCarousel;
+  previewBtn.onclick = openCarousel;
+
+  // optional: open on page load
+  // openCarousel();
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeCarousel();
+  });
+});

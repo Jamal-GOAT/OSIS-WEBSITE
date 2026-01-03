@@ -58,7 +58,7 @@
 
     <nav class = "eventnav">
         <h2>2025-2026 Events Calendar</h2>
-        <div class="main-content">
+        <div class="events-content">
             <ul id="list-container">
                 <li><a href="#Sep">September</a></li>
                 <li><a href="#Oct">October</a></li>
@@ -83,23 +83,30 @@
             
     </nav>
     <div id="Sep" class="month">
+          <button id="previewCarouselBtn" class="preview-btn">Preview Event Photos</button>
         <h1>September</h1>
 
         <ul>
             <li>LDKS</li>
         </ul>       
 
-        <div class="pictures">
-            <div class="carousel"> 
-                <a href="#pic2"><img src="LDKS1.JPG" class = "pic1" id="pic1"></a>
-                <a href="#pic3"><img src="LDKS2.JPG" class = "pic2" id="pic2"></a>
-                <a href="#pic1"><img src="LDKS3.JPG" class = "pic3" id="pic3"></a>
+        <div class="carousel fullscreen-carousel" id="event-carousel">
+            <div class="carousel-track">
+                <img src="LDKS1.JPG">
+                <img src="LDKS2.JPG">
+                <img src="LDKS3.JPG">
+                <img src="LDKS4.JPG">
+                <img src="LDKS5.JPG">
+                <img src="LDKS6.JPG">
             </div>
-            
-            <img src="LDKS4.JPG" class = "pic4">
-            <img src="LDKS5.JPG" class = "pic5">
-            <img src="LDKS6.JPG" class = "pic6">
+                <button class="carousel-btn prev">❮</button>
+                <button class="carousel-btn next">❯</button>
+                <button class="carousel-close">✕</button>
+                  
         </div>
+
+            
+  
     </div>
     <div id="Oct" class="month">
         <h1>October</h1>

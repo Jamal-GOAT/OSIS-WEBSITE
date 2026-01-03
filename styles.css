@@ -238,6 +238,7 @@ body {
     width: 100%;
     opacity: 0;
     pointer-events: none;
+    overflow-x: hidden;
 }
 
 .navbarmobile:hover {
@@ -1372,6 +1373,7 @@ footer p {
 
 
 }
+
 
 
 

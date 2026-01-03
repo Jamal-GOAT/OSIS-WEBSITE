@@ -16,11 +16,10 @@ body {
     margin-top: 90px;
     margin-left: 0;
     margin-right: 0;
-    max-width: 100%;
+    max-width: 100vw;
     overflow-x: hidden;
     background-color: #f7f3e7;
     font-family: 'DM Serif Display', serif;
-    scroll-behavior: smooth;    
 }
 
 .container{
@@ -844,6 +843,80 @@ main.container > * {
 
 
 /* EVENTS PAGE STYLES */
+/* carousel for hendrawan */
+/* FULLSCREEN CAROUSEL */
+.fullscreen-carousel {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track img {
+  flex: 0 0 100%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+}
+
+/* Buttons */
+.carousel-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  font-size: 34px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2100;
+}
+
+.carousel-btn.prev { left: 20px; }
+.carousel-btn.next { right: 20px; }
+
+/* Close button */
+.carousel-close {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 2100;
+}
+/* preview button */
+.preview-btn {
+  display: inline-block;
+  margin: 30px auto;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: #1e40af;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.preview-btn:hover {
+  background: #1d4ed8;
+}
 
 .eventnav {
     position: absolute;
@@ -864,7 +937,7 @@ main.container > * {
 .eventnav h2 {
     font-family: 'DM Serif Display', serif;
     font-size: 20px;
-    text-align: center;nter;
+    text-align: center;
     margin: 0;
     margin-right: 90px;
     padding: 10px 15px;
@@ -896,9 +969,9 @@ main.container > * {
   cursor: pointer;
 }
 
-.main-content {
+.events-content {
   width: 100%;
-  position:absolute;
+  position: absolute;
   top: 40%;
   left: 24%;
   padding: 10px;

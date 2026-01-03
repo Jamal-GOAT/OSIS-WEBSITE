@@ -164,3 +164,18 @@ function search_fun() {
 }
 
 search_fun();
+
+document.addEventListener("DOMContentLoaded", () => {
+  function changeplaceholdertext() {
+    const inputbox = document.getElementById('input-field');
+    let vw = window.innerWidth;
+
+    if(vw > 860) {
+      inputbox.placeholder = "Search events by month...";
+    } else {
+      inputbox.placeholder = "Enter month...";
+    }
+  }
+  window.addEventListener('resize', changeplaceholdertext);
+  window.addEventListener('load', changeplaceholdertext); 
+});

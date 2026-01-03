@@ -25,6 +25,7 @@ body {
   font-family: 'DM Serif Display', serif;
   overflow-x: hidden;
   margin-top: 90px;
+  width: 100%;
 }
 
 .container{
@@ -860,6 +861,11 @@ main.container > * {
   box-shadow: 0 0 50px rgba(0,0,0,0.5);
   border-top: 2px solid #c9e3ff;
   border-bottom: 2px solid #c9e3ff;
+  width: 100vw;
+
+  /*DEBUG DONT ERASE UNTIL U CANT FINISH IT*/
+  transform: translateX(-5vw);
+  /*DEBUG DONT ERASE UNTIL U CANT FINISH IT*/
 }
 
 .carousel-track {
@@ -902,7 +908,8 @@ main.container > * {
 
 
 .eventnav {
-    position: absolute;
+    position: sticky;
+    top: 0;
     z-index: 90;
     left: 0;
     right: 0;
@@ -979,12 +986,22 @@ main.container > * {
   transition: opacity 180ms ease, visibility 180ms ease;
 }
 
+#list-container li {
+  transition: all 200ms ease;
+}
+
 .eventnav:focus-within #list-container,
 #list-container:hover {
   display: block;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+#list-container li:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+  padding: 2px;
 }
 
 #list-container a {
@@ -1012,17 +1029,26 @@ main.container > * {
   border-radius: 10px;
 }
 
+.months {
+  gap: 0;
+  display: flex;
+  flex-direction: column;
+  
+}
+
 .month {
-  font-family: 'DM Serif Display', serif;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  padding-top: 15vh;
+  font-family: 'DM Serif Display', serif; 
   padding-bottom: 15vh;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  padding-top: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .month h1 {
   text-align: center;
   font-size: 48px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .month li {
@@ -1030,6 +1056,7 @@ main.container > * {
   margin-bottom: 10px;
   font-family: 'Alice', serif;
   font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .pictures {
@@ -1037,6 +1064,7 @@ main.container > * {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 80px;
 }
 
 .pictures img {
@@ -1051,10 +1079,92 @@ main.container > * {
 #Sep {
   background-color: #a09281;
   color:#383026;
+  border-bottom: 3px solid #160f01;
 }
 
-#Sep .img1 {
-  transform: rotate(-3deg);
+#Oct {
+  background-image: linear-gradient(90deg, #d80000, #6596ff);
+  color: rgb(255, 248, 248);
+  border-bottom: 3px solid #0a2342;
+  background-size: cover;
+  
+}
+
+#Oct .pictures {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#Oct .pictures .img3, #Oct .pictures .img4, #Oct .pictures .img5, #Oct .pictures .img6, #Oct .pictures .img7 {
+  width: 15%;
+}
+
+#Oct .mainimg {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+#Oct .mainimg h1 {
+  align-self: center;
+  font-size: 60px;
+  margin: 0;
+  color: rgb(255, 244, 83);
+  text-shadow: 0 0 10px #000000;
+}
+
+#Oct .img1 {
+  transform: rotate(-5deg);
+  border: 3px solid #00e1ff;
+}
+
+#Oct .img2 {
+  transform: rotate(5deg);
+  border: 3px solid #ff553f;
+}
+
+#Oct .img3, #Oct .img4 {
+  border: 2px solid #00e1ff;
+}
+
+#Oct .img6, #Oct .img7 {
+  border: 2px solid #ff553f
+}
+
+#Oct .img3, #Oct .img6 {
+  transform: rotate(5deg);
+}
+
+#Oct .img4, #Oct .img7 {
+  transform: rotate(-5deg);
+}
+
+#Oct .img5 {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  border: 2px solid #ffff00;
+}
+
+#Oct .img1, #Oct .img2, #Oct .img3, #Oct .img4, #Oct .img5, #Oct .img6, #Oct .img7 {
+  transition: all 0.3s ease;
+}
+
+#Oct .img1:hover, #Oct .img3:hover, #Oct .img4:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #098efa;
+}
+
+#Oct .img2:hover,  #Oct .img6:hover, #Oct .img7:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff6f51;
+}
+
+#Oct .img5:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffff00;
 }
 
 
@@ -1109,8 +1219,7 @@ main.container > * {
 
 
 
-
-footer {
+footer{
   background-color: white;
   height: auto;
   font-size: 17px;
@@ -1118,6 +1227,7 @@ footer {
   justify-content: center;
   border-top: 1px solid #20396e;
   height: 12vh;
+  z-index: 100;
 }
 
 footer p {

@@ -922,7 +922,6 @@ main.container > * {
     font-size: clamp(14px, 1.4vw, 24px);
     text-align: center;
     margin: 0;
-    margin-right: 50px;
     padding: 10px 15px;
     text-wrap: wrap;
 }
@@ -1262,6 +1261,7 @@ footer p {
 
 
 }
+
 
 
 

@@ -12,6 +12,7 @@
 
 * {
   box-sizing: border-box;
+  outline: 1px solid red;
 }
 
 html, body {
@@ -1371,6 +1372,7 @@ footer p {
 
 
 }
+
 
 
 

@@ -13,6 +13,7 @@
 
 * {
   box-sizing: border-box;
+  outline: 2px solid red;
 }
 
 html, body {
@@ -26,7 +27,7 @@ body {
   font-family: 'DM Serif Display', serif;
   overflow-x: hidden;
   margin-top: 90px;
-  width: 100%;
+  width: 100vw !important;
 }
 
 .container{
@@ -1415,6 +1416,7 @@ footer p {
       transform: rotateZ(5deg);
     }
 }
+
 
 
 

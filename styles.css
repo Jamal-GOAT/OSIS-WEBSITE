@@ -8,11 +8,11 @@
   --gap: 1.25rem;
   --max-width: 1100px;
   --transition: 220ms ease;
+  --imgwidth: 35%;
 }
 
 * {
   box-sizing: border-box;
-  outline: 1px solid red;
 }
 
 html, body {
@@ -238,7 +238,7 @@ body {
     width: 100%;
     opacity: 0;
     pointer-events: none;
-    overflow-x: hidden;
+    justify-content: space-between;
 }
 
 .navbarmobile:hover {
@@ -1045,16 +1045,17 @@ main.container > * {
   padding-top: 100px;
   padding-left: 5%;
   padding-right: 5%;
+  justify-content: center;
 }
 
 .month h1 {
   text-align: center;
-  font-size: 48px;
+  font-size: clamp(20px, 10vw, 70px)  ;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .month li {
-  font-size: 30px;
+  font-size: clamp(10px, 5vw, 35px);
   margin-bottom: 10px;
   font-family: 'Alice', serif;
   font-weight: bold;
@@ -1085,45 +1086,48 @@ main.container > * {
 }
 
 #Oct {
-  background-image: linear-gradient(90deg, #d80000, #6596ff);
+  background-image: linear-gradient(90deg, #6b1e2a, #223a5e);
   color: rgb(255, 248, 248);
   border-bottom: 3px solid #0a2342;
   background-size: cover;
   
 }
 
-#Oct .pictures {
+
+#Oct #image {
   justify-content: center;
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex: 0;
 }
 
 #Oct .pictures .img3, #Oct .pictures .img4, #Oct .pictures .img5, #Oct .pictures .img6, #Oct .pictures .img7 {
-  width: 15%;
+  width: 16%;
 }
 
 #Oct .mainimg {
   display: flex;
   justify-content: center;
-  gap: 10%;
+  gap: 5%;
+  flex-wrap: nowrap;
+}
+
+#Oct .mainimg img {
+  width: 40%;
 }
 
 #Oct .mainimg h1 {
   align-self: center;
-  font-size: 60px;
+  font-size: clamp(20px, 4.5vw, 60px);
   margin: 0;
   color: rgb(255, 244, 83);
   text-shadow: 0 0 10px #000000;
 }
 
 #Oct .img1 {
-  transform: rotate(-5deg);
   border: 3px solid #00e1ff;
 }
 
 #Oct .img2 {
-  transform: rotate(5deg);
   border: 3px solid #ff553f;
 }
 
@@ -1155,18 +1159,23 @@ main.container > * {
 }
 
 #Oct .img1:hover, #Oct .img3:hover, #Oct .img4:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 0 0 20px #098efa;
 }
 
 #Oct .img2:hover,  #Oct .img6:hover, #Oct .img7:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 0 0 20px #ff6f51;
 }
 
 #Oct .img5:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px #ffff00;
+}
+
+#Nov {
+  background-image: linear-gradient(0deg, #2e4d38, #3b5f46);
+  color: #f4f1e8;
 }
 
 
@@ -1279,7 +1288,6 @@ footer p {
       box-shadow: 0 8px 20px rgba(10,35,66,0.08);
       transition: opacity 0.22s ease, transform 0.2s ease, visibility 0s linear 0.2s;
       transform-origin: top;
-      transform: translateY(-12px);
     }
 
     .navbarmobile .mobile-menu:target {
@@ -1301,10 +1309,9 @@ footer p {
     .navbarmobile .container {
       margin-left: auto;
       display: flex;
-      gap: 12px;
       align-items: center;
       padding: 0;
-      padding-left: 40px;
+      justify-content: end;
     }
 
     .navbarmobile .container img {
@@ -1371,7 +1378,42 @@ footer p {
         margin: 20px -50px 0 -50px;
     }
 
+    /*EVENTS PAGE*/
+    #Oct .pictures {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    #Oct .img3, #Oct .img4 {
+        min-width: 30%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
 
+    #Oct .img3 {
+      margin-right: 10%;
+    }
+
+    #Oct .img4 {
+      margin-left: 10%;
+    }
+    #Oct .img5 {
+      margin-left: 25%;
+      margin-right: 25%;
+      min-width: var(--imgwidth);
+      margin-bottom: 10%;
+    }
+
+    #Oct .img6, #Oct .img7 {
+      min-width: 35%;
+    }
+
+    #Oct .img6 {
+      transform: rotateZ(-5deg);
+    }
+
+    #Oct .img7 {
+      transform: rotateZ(5deg);
+    }
 }
 
 

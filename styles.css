@@ -11,10 +11,7 @@
   --imgwidth: 35%;
 }
 
-* {
-  box-sizing: border-box;
-  outline: 2px solid red;
-}
+
 
 html, body {
   margin: 0;
@@ -91,7 +88,8 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 92px;
+    height: 6vw;
+    /* changed height to avoid overlapping body-jemes */
     display: flex;
     align-items: center;
     background-color: #ffffff;
@@ -102,7 +100,6 @@ body {
     z-index: 100;
     border-bottom: 3px solid #20396e;
     width: 100%;
-
 }
 
 .navbar:hover {
@@ -119,7 +116,8 @@ body {
     flex-direction: row;
     /* Ensure it locks to row */
     justify-content: end;
-    margin-right: 20px
+    margin-right: 100px
+    /* makes the links go right + margin - jemes */
 }
 
 .navbar .logos {
@@ -530,7 +528,8 @@ body {
 .site-header{
   background: linear-gradient(90deg, rgba(10,35,66,0.96), rgba(6,21,40,0.92));
   color: #fff;
-  padding: 1rem 0;
+  padding: 25px;
+  height: 6%;
 }
 .header-inner{
   display:flex;
@@ -568,9 +567,9 @@ body {
   font-weight:600;
   font-size: clamp(0.6rem, 0.8vw, 8rem);
   transition: var(--transition);
-  width: 100%;
   font-family: 'DM Serif Display', serif;
-  width: 80px;
+  width: 90px;
+  
 }
 .filter-btn:hover {
   transform: translateY(-2px);
@@ -885,7 +884,7 @@ main.container > * {
 .carousel-track img {
   flex: 0 0 100%;
   min-width: 100vw;
-  height: 600px;
+  height: 800px;
   object-fit: cover;
 }
 
@@ -920,10 +919,9 @@ main.container > * {
     z-index: 90;
     left: 0;
     right: 0;
-    margin-top: -10px;
     background-color: var(--accent);
     color: white;
-    padding: 20px 40px;
+    padding: 15px;
     display: flex;
     flex-direction: row;
     align-items: center;

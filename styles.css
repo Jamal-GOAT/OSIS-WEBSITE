@@ -11,7 +11,9 @@
   --imgwidth: 35%;
 }
 
-
+* {
+  box-sizing: border-box;
+}
 
 html, body {
   margin: 0;
@@ -88,7 +90,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 6vw;
+    height: 100px;
     /* changed height to avoid overlapping body-jemes */
     display: flex;
     align-items: center;
@@ -1200,8 +1202,34 @@ ul {
 #Nov {
   background-image: linear-gradient(0deg, #2e4d38, #3b5f46);
   color: #f4f1e8;
+  padding: 100px 0;
+  border-bottom: 2px solid rgb(0, 43, 9);
 }
 
+#Nov .heroes-day {
+  border-bottom: 2px double gold;
+  box-shadow: 0 10px 10px rgba(117, 106, 4, 0.541);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 100px;
+}
+
+#Nov .teachers-day {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#Nov li {
+  color: #e0e0e0;
+}
+
+
+#Dec {
+  background-color: rgb(23, 23, 58);
+  color: white;
+}
 
 
 
@@ -1336,6 +1364,7 @@ footer p {
       align-items: center;
       padding: 0;
       justify-content: end;
+      margin-right: 10vw;
     }
 
     .navbarmobile .container img {
@@ -1435,18 +1464,11 @@ footer p {
 
     #Oct .img6 {
       transform: rotateZ(-5deg);
+      margin-right: 10%
     }
 
     #Oct .img7 {
       transform: rotateZ(5deg);
+      margin-left: 10%;
     }
 }
-
-
-
-
-
-
-
-
-

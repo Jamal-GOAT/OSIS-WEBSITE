@@ -1348,6 +1348,9 @@ footer p {
         pointer-events: auto;
     }
 
+    .navbarmobile .logos {
+      gap: 5px;
+    }
     .navbarmobile .logos img {
       width: 50px;
     }
@@ -1396,6 +1399,7 @@ footer p {
       padding: 0;
       justify-content: end;
       margin-right: 10vw;
+      margin-right: 0 !important;
     }
 
     .navbarmobile .container img {
@@ -1463,6 +1467,23 @@ footer p {
     }
 
     /*EVENTS PAGE*/
+    .eventnav {
+      flex-direction: column !important;
+      height: auto !important;
+      padding: 15px 10px !important;
+      gap: 10px
+    }
+
+    .eventnav h2 {
+      margin-right: 0 !important;
+      font-size: 16px;
+    }
+
+    .input-box {
+      width: 100% !important;
+      min-width: unset !important;
+    }
+
     #Oct .pictures {
       display: flex;
       justify-content:space-between;

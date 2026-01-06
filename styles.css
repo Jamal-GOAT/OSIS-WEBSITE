@@ -26,7 +26,7 @@ body {
   font-family: 'DM Serif Display', serif;
   overflow-x: hidden;
   margin-top: 90px;
-  width: 100vw !important;
+  width: 100% !important;
 }
 
 .container{
@@ -531,7 +531,6 @@ body {
   background: linear-gradient(90deg, rgba(10,35,66,0.96), rgba(6,21,40,0.92));
   color: #fff;
   padding: 25px;
-  height: 6%;
 }
 .header-inner{
   display:flex;
@@ -1231,8 +1230,39 @@ ul {
   color: white;
 }
 
+#Jan {
+  background-color: white;
+}
 
+#Feb {
+  background-image: linear-gradient(0deg, red, #d11245);
+}
 
+#Feb h1 {
+  color: white;
+}
+
+#Feb .valentines {
+  color: rgb(255, 157, 174);
+}
+
+#Feb .CNY {
+  color: rgb(255, 218, 98);
+}
+
+#Mar {
+  background-color: white;
+  color: black;
+}
+
+#Apr {
+  background-color: #f8f4ee;
+  color:#3b2a20;
+}
+
+#Apr h1 {
+  color: #5a3e2b;
+}
 
 
 

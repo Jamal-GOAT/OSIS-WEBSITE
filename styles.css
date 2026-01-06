@@ -241,7 +241,7 @@ body {
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
     z-index: 100;
     border-bottom: 3px solid #20396e;
-    width: 100%;
+    width: 100vw;
     opacity: 0;
     pointer-events: none;
     justify-content: space-between;
@@ -870,10 +870,7 @@ main.container > * {
   border-top: 2px solid #c9e3ff;
   border-bottom: 2px solid #c9e3ff;
   width: 100vw;
-
-  /*DEBUG DONT ERASE UNTIL U CANT FINISH IT*/
-  transform: translateX(-5vw);
-  /*DEBUG DONT ERASE UNTIL U CANT FINISH IT*/
+  tra
 }
 
 .carousel-track {
@@ -1088,6 +1085,11 @@ main.container > * {
   background-color: #a09281;
   color:#383026;
   border-bottom: 3px solid #160f01;
+  padding-left: 0;
+}
+
+#Sep ul {
+  padding-left: 5%;
 }
 
 #Oct {
@@ -1392,6 +1394,7 @@ footer p {
       display: flex;
       align-items: center;
     }
+
     .navbarmobile .container {
       margin-left: auto;
       display: flex;
@@ -1479,6 +1482,9 @@ footer p {
       font-size: 16px;
     }
 
+    .eventnav #list-container {
+      margin-top: 5%;
+    }
     .input-box {
       width: 100% !important;
       min-width: unset !important;

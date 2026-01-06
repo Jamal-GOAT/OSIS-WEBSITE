@@ -1482,7 +1482,7 @@ footer p {
 
 
     .eventnav .events-content {
-      top: 60%;
+      margin-top: 35px;
       left: 50%;
     }
     .input-box {
@@ -1530,4 +1530,5 @@ footer p {
       margin-left: 10%;
     }
 }
+
 

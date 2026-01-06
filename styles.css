@@ -870,7 +870,6 @@ main.container > * {
   border-top: 2px solid #c9e3ff;
   border-bottom: 2px solid #c9e3ff;
   width: 100vw;
-  tra
 }
 
 .carousel-track {
@@ -966,10 +965,9 @@ main.container > * {
 }
 
 .events-content {
-  width: 100%;
   position: absolute;
   top: 40%;
-  left: 24%;
+  left: 80%;
   padding: 10px;
   margin-top: 25px;
 }
@@ -1482,8 +1480,10 @@ footer p {
       font-size: 16px;
     }
 
-    .eventnav #list-container {
-      margin-top: 5%;
+
+    .eventnav .events-content {
+      top: 60%;
+      left: 50%;
     }
     .input-box {
       width: 100% !important;

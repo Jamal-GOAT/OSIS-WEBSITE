@@ -13,7 +13,6 @@
 
 * {
   box-sizing: border-box;
-  outline: 2px solid red;
 }
 
 html, body {
@@ -25,7 +24,7 @@ html, body {
 body {
   background-color: #f7f3e7;
   font-family: 'DM Serif Display', serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   margin-top: 90px;
   width: 100% !important;
 }
@@ -363,6 +362,7 @@ body {
 
 .back2 {
   background-color: #152a41;
+  overflow-x: hidden;
 }
 
 /*GENERAL STYLES FOR MAIN TITLE*/
@@ -1236,7 +1236,7 @@ ul {
 }
 
 #Feb {
-  background-image: linear-gradient(0deg, red, #d11245);
+  background-image: linear-gradient(0deg, red, #ff4573);
 }
 
 #Feb h1 {
@@ -1482,8 +1482,8 @@ footer p {
 
 
     .eventnav .events-content {
-      margin-top: 35px;
-      left: 50%;
+      margin-top: 40px;
+      left: 40%;
     }
     .input-box {
       width: 100% !important;

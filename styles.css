@@ -1088,7 +1088,10 @@ main.container > * {
 
 #Sep ul {
   padding-left: 5%;
+  transform:  translateX(-200px);
+  opacity: 0;
 }
+
 
 #Oct {
   background-image: linear-gradient(90deg, #6b1e2a, #223a5e);
@@ -1236,7 +1239,7 @@ ul {
 }
 
 #Feb {
-  background-image: linear-gradient(0deg, red, #ff4573);
+  background-image: linear-gradient(0deg, rgb(134, 0, 0), #9e2140);
 }
 
 #Feb h1 {
@@ -1245,10 +1248,25 @@ ul {
 
 #Feb .valentines {
   color: rgb(255, 157, 174);
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
 }
 
 #Feb .CNY {
   color: rgb(255, 218, 98);
+}
+
+#Feb .valentines .heart {
+  width: clamp(30px, 3vw, 50px);
+  filter: drop-shadow(0 0 30px rgb(56, 0, 0));
+  transition: all 1s ease;
+}
+
+#Feb .valentines .heart:hover {
+  filter: drop-shadow(0 0 25px rgb(49, 0, 0));
+  transform: rotateY(360deg) scale(1.05);
 }
 
 #Mar {
@@ -1265,7 +1283,59 @@ ul {
   color: #5a3e2b;
 }
 
+#Apr .images {
+  display: flex;
+  justify-content: center;;
+  margin-top: 50px;
+  gap: 10%;
+}
 
+#Apr .images img {
+  width: 30%;
+  object-fit: cover;
+  box-shadow: 0 0 30px rgb(88, 48, 2);
+}
+
+#Apr .images .img1 {
+  transform: rotate(-5deg);
+}
+
+#Apr .images .img2 {
+  transform: rotate(5deg);
+}
+
+#May {
+  background-color: white;
+  color: black;
+}
+
+#Jun {
+  background-color: rgb(23, 23, 58);
+  color: white;
+}
+
+#Jul {
+  background-color: #A7D8F5;
+  color: #1F2A44;
+  border-bottom: 2px solid #FFD966;
+}
+
+#Aug {
+  background-color: #F8FAFC;
+  color: #1F2933;
+}
+
+#Aug .Independence {
+  color: #D62828;
+}
+
+#Aug .Prep {
+  color: #1c4aad;
+}
+
+#Aug .Farewell {
+  color: rgb(92, 54, 5);
+}
 
 
 
@@ -1465,6 +1535,16 @@ footer p {
     .back1 .title, .back1 .par {
         padding: none;
         margin: 20px -50px 0 -50px;
+    }
+
+    .header-inner {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .filter-btn {
+      width: 20%;
+      min-width: 70px;
     }
 
     /*EVENTS PAGE*/
